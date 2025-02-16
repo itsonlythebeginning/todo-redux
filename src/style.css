@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+body{
+    background: lightgrey;
+    padding: 100px;
+}
+
+
+.activeBTN{
+    background: black;
+}
