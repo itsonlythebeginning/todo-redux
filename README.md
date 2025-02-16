@@ -1,4 +1,4 @@
-# React + Vite
+# React + Redux + Tailwind + classnames
 
 Try It Here - https://itsonlythebeginning.github.io/todo-redux/
 
