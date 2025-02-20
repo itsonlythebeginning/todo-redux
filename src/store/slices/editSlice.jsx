@@ -7,8 +7,8 @@ const editSlice = createSlice({
     name: "edit",
     initialState: {
         editData : [
-            {id: nanoid(), isShow: false, newTitle: ""},
-            {id: nanoid(), isShow: false, newTitle: ""}
+            {id: nanoid(), isShow: false, newTitle: "", parentId: 111},
+            {id: nanoid(), isShow: false, newTitle: "", parentId: 222}
         ]
     },
     reducers: {
@@ -44,7 +44,7 @@ const editSlice = createSlice({
 
     extraReducers: (builder) => {
         builder.addCase(addTask, (state, action) => {
-            state.editData.push({id: nanoid(), isShow: false, newTitle: ""})
+            state.editData.push({id: nanoid(), isShow: false, newTitle: "", parentId: action.payload.id})
         })
     },
 

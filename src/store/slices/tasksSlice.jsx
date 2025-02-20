@@ -1,9 +1,9 @@
-import {createSlice, nanoid} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 
 const tasks = [
-    {id : nanoid(), title: "Hello word", done: false},
-    {id : nanoid(), title: "Go Gym", done: false}
+    {id : 111, title: "Hello word", done: false},
+    {id : 222, title: "Go Gym", done: false}
 ]
 
 
@@ -50,8 +50,8 @@ const tasksSlice = createSlice({
 
         addTask(state, action) {
             state.tasks.push({
-                id: nanoid(),
-                title: action.payload,
+                id: action.payload.id,
+                title: action.payload.title,
                 done: false
             })
         },

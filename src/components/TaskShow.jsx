@@ -9,11 +9,13 @@ import {useDispatch} from "react-redux";
 
 function TaskShow({task, editData}) {
 
+
     const dispatch = useDispatch()
 
     const {title, id, done : status} = task
 
-    const {id : editID, isShow, newTitle} = editData
+    const [{id : editID, isShow, newTitle}] = editData
+
 
     const handleStatusClick = (id) => {
         dispatch(changeStatusTask(id))

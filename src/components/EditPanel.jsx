@@ -8,7 +8,7 @@ function EditPanel({task, editData}) {
     const dispatch = useDispatch()
 
     const {title, id, done : status} = task
-    const {id : editID, isShow, newTitle} = editData
+    const [{id : editID, isShow, newTitle}] = editData
 
     useEffect( () => {
         dispatch(changeNewTitle({

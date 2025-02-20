@@ -24,8 +24,16 @@ function TaskList() {
 
     })
 
+
+
+
     const renderedTasks = filteredTasks.map(function (task, index) {
-        return <TaskShow key={task.id} task={task} editData={editData[index]} />
+
+        const filterEditData = editData.filter(function (data) {
+            return data.parentId === task.id
+        })
+
+        return <TaskShow key={task.id} task={task} editData={filterEditData} />
     })
 
     return (

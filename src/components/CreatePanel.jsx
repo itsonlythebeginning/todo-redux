@@ -1,6 +1,8 @@
 import Button from "./Button.jsx";
 import {useSelector, useDispatch} from "react-redux";
 import {changeAddTitle, addTask} from "../store/store.jsx";
+import {nanoid} from "@reduxjs/toolkit";
+
 
 
 function CreatePanel() {
@@ -13,7 +15,7 @@ function CreatePanel() {
     }
     const handleSubmit = (event) => {
         event.preventDefault()
-        dispatch(addTask(addTitle))
+        dispatch(addTask({title: addTitle, id: nanoid()}))
     }
 
     return (
